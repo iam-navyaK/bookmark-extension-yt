@@ -1,15 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YouTube Bookmark</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Bookmark Extension</title>
+  
 </head>
 <body>
-    <h2>YouTube Timestamps</h2>
+  <h1>YouTube Bookmark Extension</h1>
+
+  <!-- Authentication Section -->
+  <div id="auth-section">
+    <h2>Sign In</h2>
+    <input type="email" id="email" placeholder="Email" />
+    <input type="password" id="password" placeholder="Password" />
+    <div>
+      <button id="signup">Sign Up</button>
+      <button id="login">Log In</button>
+    </div>
+    <p id="auth-message"></p>
+  </div>
+
+  <!-- Bookmarks Section (Hidden Initially) -->
+  <div id="bookmark-section">
+    <h2>Bookmark YouTube Timestamp</h2>
+    <label for="tags">Tags:</label>
+    <input type="text" id="tags" placeholder="Add tags" />
     <button id="bookmark">Bookmark Timestamp</button>
+    <button id="export">Export Bookmarks</button>
     <ul id="timestampList"></ul>
-    <script src="popup.js"></script>
+  </div>
+
+  <script src="popup.js"></script>
 </body>
 </html>
